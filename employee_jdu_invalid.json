@@ -1,0 +1,51 @@
+{
+	"empId": "24789",
+	"firstName": "Suzuki",
+	"lastName": "David Tarou",
+	"callMe": "David",
+	"experience": "2.5 Years",
+	"gender": "Female",
+	<!-- Adding HTML Comments to make json invalid -->
+	"fjLvl": 11,
+	"primarySkill": "Java/Spring MVC and ASP.Net(C#)",
+	"certification": "JLPT N2, PMP",
+	"profilePhotoUrl": "D:\\Data\\profiles\\24789.png",
+	"hobby": "Playing Cricket, Listening Music and Drawing\nAlso like travelling and cooking ",
+	"skillMatrix": [
+		{
+			"skill": "Java/Spring MVC",
+			"category": "Language / Framework",
+			"experience": "8.5"
+		},
+		{
+			"skill": "Python",
+			"category": "Language",
+			"experience": "5"
+		},
+		{
+			"skill": "PostgreSQL",
+			"category": "RDBMS",
+			"experience": "5"
+		},
+		{
+			"skill": "AWS Lamda",
+			"category": "Cloud Service",
+			"experience": "3.5"
+		},
+		{
+			"skill": "Selenium",
+			"category": "Testing Framework",
+			"experience": "2.5"
+		},
+		{
+			"skill": "Linux",
+			"category": "OS",
+			"experience": "2"
+		},
+		{
+			"skill": "JavaScript/KnockoutJS",
+			"category": "JS Framework",
+			"experience": "0.5"
+		}
+	]
+}
