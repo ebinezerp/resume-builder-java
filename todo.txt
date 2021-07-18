@@ -1,1 +1,7 @@
 what if the data is not present in json file?
+What if the object is existed but not in employee model ?
+What if the header image is not available?
+Certification level if any
+Japanese Level if any
+
+

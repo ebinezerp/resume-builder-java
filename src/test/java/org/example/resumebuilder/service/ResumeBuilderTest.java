@@ -1,32 +1,32 @@
 package org.example.resumebuilder.service;
 
-import com.itextpdf.text.DocumentException;
+import org.example.resumebuilder.exception.InvalidJsonFormatException;
 import org.example.resumebuilder.model.Employee;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ResumeBuilderTest {
 
     private ResumeBuilder resumeBuilder;
+    private EmployeeJsonFileReader employeeJsonFileReader;
 
     @BeforeEach
     public void setUp(){
         resumeBuilder = new ResumeBuilderImpl();
+        employeeJsonFileReader = new EmployeeJsonFileReaderImpl();
     }
 
     @Test
-    void testBuild() throws DocumentException, FileNotFoundException {
-        Employee employee = new Employee();
-        employee.setEmpId("12345");
-        employee.setFirstName("sudhakar");
-        employee.setLastName("perumala");
+    void testBuild() throws IOException, InvalidJsonFormatException {
+        Employee employee = employeeJsonFileReader.readFile("./employee_jdu.json");
         resumeBuilder.build(employee, "./");
         File file = new File("./"+employee.getFirstName()+employee.getLastName()+"_"+employee.getEmpId()+".pdf");
-        //assertTrue(file.exists());
+        assertTrue(file.exists());
     }
 }
